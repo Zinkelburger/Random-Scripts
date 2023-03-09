@@ -15,11 +15,12 @@ if [ ! -f "$solutionFile" ]; then
   exit 1
 fi
 
+#convert pdf to text so it can be parsed by c++
 pdftotext "$solutionFile" pdfOutput.txt
 
 ./discreteScript < pdfOutput.txt > scriptWords.txt
 
-#will loop until dictionary is fully read or output file was made
+#will loop until scriptWords is fully read or the output file was made
 while IFS=$' \t\r\n' read -r word; do
 qpdf --password="$word" --decrypt "$pdfName" output.pdf &>/dev/null
   if [ -f output.pdf ]
