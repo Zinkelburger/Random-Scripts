@@ -5,7 +5,7 @@
 #include <cctype>
 using namespace std;
 
-// removed the heapify operation. I only need the words of length 1, I don't need to sort anything
+// removed the heapify operation. I only need the words of frequency 1, I don't need to sort anything
 bool isAllLowercase(const std::string& str) {
     return std::all_of(str.begin(), str.end(), [](char c){ return islower(c); });
 }
