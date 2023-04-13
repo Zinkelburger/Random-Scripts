@@ -7,4 +7,4 @@ discreteScript: main.cpp
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	discreteScript
+rm discreteScript
