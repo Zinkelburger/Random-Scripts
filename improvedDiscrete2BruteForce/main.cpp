@@ -34,7 +34,7 @@ int main(){
 
     for (auto& e : wordMap) {
         if (e.second == 1) {
-            // the string is the first part of x
+            // the string is the first part of e
             std::cout << e.first << "\n";
         }
     }
